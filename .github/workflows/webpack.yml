@@ -11,16 +11,13 @@ jobs:
       - name: 迁出代码
         uses: actions/checkout@main
 
-      - name: 安装pnpm
-        uses: pnpm/action-setup@v4
-
       - name: 安装Node
         uses: actions/setup-node@main
         with:
           node-version: "22.x"
 
       - name: 安装依赖
-        run: pnpm i
+        run: npm i
 
       - name: 发布到服务器
         uses: easingthemes/ssh-deploy@main
